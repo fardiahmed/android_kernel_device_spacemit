@@ -362,6 +362,14 @@ SPACEMIT_IN_TREE_MODULES = [
 # ============================================================
 # Filegroups for SELinux contexts
 # ============================================================
+# The K3 board (//devices/spacemit/bananapi_sm10) builds the same kernel tree on top of this
+# fragment and reuses the SELinux file_contexts.
+exports_files([
+    "spacemit_k1x.fragment",
+    "selinux/file_contexts",
+    "selinux/system_file_contexts",
+])
+
 filegroup(
     name = "system_file_contexts",
     srcs = ["selinux/system_file_contexts"],
