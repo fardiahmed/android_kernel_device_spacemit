@@ -296,3 +296,8 @@ CONFIG_SND_SOC_SIMPLE_AMPLIFIER=m
 
 # K1 HDMI audio (ADMA + SSPA driven from Linux, no RCPU firmware)
 CONFIG_SND_SOC_K1_HDMI_AUDIO=m
+
+# ============================================================
+# HDMI-CEC: cec-gpio adapter on GPIO_88, physical address from spacemit_hdmi
+# ============================================================
+CONFIG_CEC_GPIO=m

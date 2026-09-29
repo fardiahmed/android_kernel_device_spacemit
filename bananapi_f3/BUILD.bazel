@@ -141,6 +141,8 @@ SPACEMIT_VENDOR_DLKM_MODULES = [
     # Wi-Fi: on-board RTL8852BS (SDIO). cfg80211 comes from the system_dlkm set.
     # (The BT side, btrtl.ko, lives in system_dlkm next to hci_uart.ko.)
     "8852bs.ko",
+    # HDMI-CEC over GPIO_88 (cec-gpio)
+    "cec-gpio.ko",
 ]
 
 # ============================================================
@@ -216,6 +218,7 @@ SPACEMIT_VENDOR_DLKM_MODULES_PATHS = [
     "sound/soc/codecs/snd-soc-simple-amplifier.ko",
     "sound/soc/spacemit/snd-soc-k1-hdmi-audio.ko",
     "drivers/net/wireless/realtek/rtl8852bs/8852bs.ko",
+    "drivers/media/cec/platform/cec-gpio/cec-gpio.ko",
 ]
 
 # ============================================================
@@ -318,6 +321,7 @@ SPACEMIT_IN_TREE_MODULES = [
     # Wi-Fi / Bluetooth (RTL8852BS)
     "drivers/bluetooth/btrtl.ko",
     "drivers/net/wireless/realtek/rtl8852bs/8852bs.ko",
+    "drivers/media/cec/platform/cec-gpio/cec-gpio.ko",
 ]
 
 # ============================================================
