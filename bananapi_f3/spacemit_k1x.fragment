@@ -274,3 +274,8 @@ CONFIG_REGULATOR_SPACEMIT_P1=m
 # ============================================================
 CONFIG_POWER_RESET_SPACEMIT_K1X=m
 CONFIG_POWER_RESET_SPACEMIT_P1=m
+
+# ============================================================
+# Power key - P1 PMIC PWRON interrupts (via simple-mfd-i2c regmap IRQ chip)
+# ============================================================
+CONFIG_INPUT_SPACEMIT_P1_PWRKEY=m

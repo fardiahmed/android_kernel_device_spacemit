@@ -61,6 +61,7 @@ SPACEMIT_VENDOR_BOOT_MODULES = [
     "rtc-spacemit-p1.ko",
     # Reboot
     "spacemit-p1-reboot.ko",
+    "spacemit-p1-pwrkey.ko",
     # SoC: DRAM bus stub + DDR AXI bandwidth monitor.
     # Must be available before DPU/HDMI so the interconnect = <&dram_range1>
     # reference in the HDMI DT node resolves.
@@ -151,6 +152,7 @@ SPACEMIT_VENDOR_BOOT_MODULES_PATHS = [
     "drivers/mmc/host/sdhci-of-k1.ko",
     "drivers/rtc/rtc-spacemit-p1.ko",
     "drivers/power/reset/spacemit-p1-reboot.ko",
+    "drivers/input/misc/spacemit-p1-pwrkey.ko",
     # SoC + DRM stack moved from vendor_dlkm to vendor_boot
     "drivers/soc/spacemit/k1x-dma-range.ko",
     "drivers/soc/spacemit/ddr-bw/spacemit_ddrbw.ko",
@@ -233,6 +235,7 @@ SPACEMIT_IN_TREE_MODULES = [
     "drivers/rtc/rtc-spacemit-p1.ko",
     # Reboot
     "drivers/power/reset/spacemit-p1-reboot.ko",
+    "drivers/input/misc/spacemit-p1-pwrkey.ko",
     # Vendor DLKM modules (loaded after boot)
     # I2C additional
     "drivers/i2c/busses/i2c-k1x.ko",
