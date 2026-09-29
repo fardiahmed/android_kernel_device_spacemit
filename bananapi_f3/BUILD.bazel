@@ -277,6 +277,9 @@ SPACEMIT_IN_TREE_MODULES = [
     "drivers/soc/spacemit/k1x-dma-range.ko",
     "drivers/soc/spacemit/ddr-bw/spacemit_ddrbw.ko",
     "drivers/soc/spacemit/spacemit-socinfo.ko",
+    # V2D (2D graphics accelerator) — newly built by this kernel checkout,
+    # not yet declared upstream; Kleaf refuses to build without listing it.
+    "drivers/soc/spacemit/v2d/v2d.ko",
     # eFuse
     "drivers/nvmem/spacemit-efuse.ko",
     # Reboot - SoC boot-mode register (in addition to spacemit-p1 PMIC)
@@ -297,6 +300,8 @@ SPACEMIT_IN_TREE_MODULES = [
     # SPI
     "drivers/spi/k1x-spi.ko",
     "drivers/spi/spi-k1x-qspi.ko",
+    # newly built by this kernel checkout, not yet declared upstream
+    "drivers/spi/spi-spacemit-k1.ko",
     # PCIe
     "drivers/pci/pwrctrl/pci-pwrctrl-core.ko",
     "drivers/pci/pwrctrl/pci-pwrctrl-generic.ko",
