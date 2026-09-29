@@ -72,6 +72,14 @@ SPACEMIT_VENDOR_BOOT_MODULES = [
     "drm_dma_helper.ko",
     "spacemit-drm.ko",
     "spacemit_hdmi.ko",
+    # USB gadget (UDC) and host: needed in recovery/fastbootd, which has no vendor_dlkm
+    "phy-k1x-ci-usb2.ko",
+    "phy-k1x-ci-otg.ko",
+    "k1x_udc_core.ko",
+    "phy-spacemit-k1x-combphy.ko",
+    "dwc3-spacemit.ko",
+    "ehci-k1x-ci.ko",
+    "onboard_usb_dev.ko",
 ]
 
 # ============================================================
@@ -112,15 +120,7 @@ SPACEMIT_VENDOR_DLKM_MODULES = [
     "powervr.ko",
     # Power Domains
     # CPUfreq — builtin (=y), not module
-    # USB
-    # Combo PHY USB3+PCIe (must load before dwc3 for xHCI USB 3.0 init)
-    "phy-spacemit-k1x-combphy.ko",
-    "dwc3-spacemit.ko",
-    "phy-k1x-ci-usb2.ko",
-    "phy-k1x-ci-otg.ko",
-    "ehci-k1x-ci.ko",
-    "onboard_usb_dev.ko",
-    "k1x_udc_core.ko",
+    # USB modules are in VENDOR_BOOT_MODULES (recovery/fastbootd)
     # Media/Camera
     "cam_plat_v2.ko",
     "cam_ccic_v2.ko",
@@ -159,6 +159,13 @@ SPACEMIT_VENDOR_BOOT_MODULES_PATHS = [
     "drivers/gpu/drm/drm_dma_helper.ko",
     "drivers/gpu/drm/spacemit/spacemit-drm.ko",
     "drivers/gpu/drm/spacemit/spacemit_hdmi.ko",
+    "drivers/usb/phy/phy-k1x-ci-usb2.ko",
+    "drivers/usb/phy/phy-k1x-ci-otg.ko",
+    "drivers/usb/gadget/udc/k1x_udc_core.ko",
+    "drivers/phy/spacemit/phy-spacemit-k1x-combphy.ko",
+    "drivers/usb/dwc3/dwc3-spacemit.ko",
+    "drivers/usb/host/ehci-k1x-ci.ko",
+    "drivers/usb/misc/onboard_usb_dev.ko",
 ]
 
 # ============================================================
@@ -187,13 +194,6 @@ SPACEMIT_VENDOR_DLKM_MODULES_PATHS = [
     "drivers/gpu/drm/drm_exec.ko",
     "drivers/gpu/drm/scheduler/gpu-sched.ko",
     "drivers/gpu/drm/imagination/powervr.ko",
-    "drivers/phy/spacemit/phy-spacemit-k1x-combphy.ko",
-    "drivers/usb/dwc3/dwc3-spacemit.ko",
-    "drivers/usb/phy/phy-k1x-ci-usb2.ko",
-    "drivers/usb/phy/phy-k1x-ci-otg.ko",
-    "drivers/usb/host/ehci-k1x-ci.ko",
-    "drivers/usb/misc/onboard_usb_dev.ko",
-    "drivers/usb/gadget/udc/k1x_udc_core.ko",
     "drivers/media/platform/spacemit/camera/cam_plat_v2.ko",
     "drivers/media/platform/spacemit/camera/cam_ccic_v2.ko",
     "drivers/media/platform/spacemit/camera/cam_vi_v2.ko",
