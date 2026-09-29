@@ -288,3 +288,11 @@ CONFIG_WLAN_VENDOR_REALTEK=y
 CONFIG_PWRSEQ_SIMPLE=y
 CONFIG_RTL8852BS=m
 CONFIG_BT_HCIUART_RTL=y
+
+# ============================================================
+# Speaker amplifier (GPIO127 enable) behind the ES8326 HP output
+# ============================================================
+CONFIG_SND_SOC_SIMPLE_AMPLIFIER=m
+
+# K1 HDMI audio (ADMA + SSPA driven from Linux, no RCPU firmware)
+CONFIG_SND_SOC_K1_HDMI_AUDIO=m
