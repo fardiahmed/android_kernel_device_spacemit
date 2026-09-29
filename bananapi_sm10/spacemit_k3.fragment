@@ -1,0 +1,57 @@
+# SpacemiT K3 (BananaPi BPI-SM10): K3 drivers on top of gki_defconfig and the K1 fragment
+# (//devices/spacemit/bananapi_f3:spacemit_k1x.fragment), same kernel tree.
+
+# ------------------------------------------------------------------
+# Drivers that exist in a K1 and a K3 flavour.
+# ------------------------------------------------------------------
+# K1 drivers stay enabled (Kleaf checks every fragment value); the K3 loads its own.
+# VPU: amvx_k3.ko
+CONFIG_VIDEO_LINLON_K3=m
+# Display: spacemit-drm-k3.ko (saturn-hee DPU)
+CONFIG_DRM_SPACEMIT_K3=m
+CONFIG_DRM_SPACEMIT_K3_DPU=m
+CONFIG_SPACEMIT_INNO_DP=m
+
+# ------------------------------------------------------------------
+# Clocks, resets, power domains, mailbox (RPMI)
+# ------------------------------------------------------------------
+CONFIG_SPACEMIT_K3_CCU=m
+CONFIG_RESET_SPACEMIT_K3=m
+CONFIG_SPACEMIT_MAILBOX=m
+CONFIG_K3_MAILBOX=m
+CONFIG_SPACEMIT_K3_PM_DOMAINS=m
+CONFIG_SPACEMIT_K3_PMU_KEEPALIVE=y
+CONFIG_SPACEMIT_K3_REMOTEPROC=m
+
+# ------------------------------------------------------------------
+# Storage: UFS (boot device on the K3-CoM260 module); eMMC/SD use sdhci-of-k1
+# ------------------------------------------------------------------
+CONFIG_SCSI_UFS_SPACEMIT_K3=m
+
+# ------------------------------------------------------------------
+# IOMMU, DMA, thermal, power key, reboot
+# ------------------------------------------------------------------
+CONFIG_RISCV_IOMMU_SPACEMIT_K3=y
+CONFIG_SPACEMIT_ADMA=m
+CONFIG_SPACEMIT_K3_THERMAL=m
+CONFIG_SPACEMIT_POWERKEY_MONITOR=y
+CONFIG_SPACEMIT_REBOOT_CONTROL=y
+
+# ------------------------------------------------------------------
+# USB3 / PCIe PHYs, Type-C (pico-itx reference: FUSB301)
+# ------------------------------------------------------------------
+CONFIG_PHY_SPACEMIT_K3_USB3=m
+CONFIG_PHY_SPACEMIT_K3_PCIE=m
+CONFIG_TYPEC_FUSB301=m
+
+# ------------------------------------------------------------------
+# Ethernet (4x GMAC, stmmac glue)
+# ------------------------------------------------------------------
+CONFIG_STMMAC_ETH=m
+CONFIG_STMMAC_PLATFORM=m
+CONFIG_DWMAC_SPACEMIT=m
+
+# ------------------------------------------------------------------
+# Audio: K3 RI2S (DP audio card on the reference board)
+# ------------------------------------------------------------------
+CONFIG_SND_SOC_K3_RI2S=m
