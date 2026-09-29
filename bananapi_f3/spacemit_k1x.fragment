@@ -279,3 +279,12 @@ CONFIG_POWER_RESET_SPACEMIT_P1=m
 # Power key - P1 PMIC PWRON interrupts (via simple-mfd-i2c regmap IRQ chip)
 # ============================================================
 CONFIG_INPUT_SPACEMIT_P1_PWRKEY=m
+
+# ============================================================
+# Wi-Fi + Bluetooth: on-board RTL8852BS (SDIO 8852bs.ko, UART H5 + btrtl)
+# ============================================================
+CONFIG_WLAN=y
+CONFIG_WLAN_VENDOR_REALTEK=y
+CONFIG_PWRSEQ_SIMPLE=y
+CONFIG_RTL8852BS=m
+CONFIG_BT_HCIUART_RTL=y
