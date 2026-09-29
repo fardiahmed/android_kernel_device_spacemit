@@ -143,6 +143,16 @@ SPACEMIT_VENDOR_DLKM_MODULES = [
     "8852bs.ko",
     # HDMI-CEC over GPIO_88 (cec-gpio)
     "cec-gpio.ko",
+    # Header I2C4 sensors: AHT20 (hwmon), BMP280 (IIO), i2c-dev (MPU-9250 from the HAL)
+    "hwmon.ko",
+    "aht10.ko",
+    "crc8.ko",
+    "bmp280.ko",
+    "bmp280-i2c.ko",
+    "bmp280-spi.ko",
+    "i2c-dev.ko",
+    "kfifo_buf.ko",
+    "industrialio-triggered-buffer.ko",
 ]
 
 # ============================================================
@@ -219,6 +229,16 @@ SPACEMIT_VENDOR_DLKM_MODULES_PATHS = [
     "sound/soc/spacemit/snd-soc-k1-hdmi-audio.ko",
     "drivers/net/wireless/realtek/rtl8852bs/8852bs.ko",
     "drivers/media/cec/platform/cec-gpio/cec-gpio.ko",
+    # Header I2C4 sensors: AHT20 (hwmon), BMP280 (IIO), i2c-dev (MPU-9250 from the HAL)
+    "drivers/hwmon/hwmon.ko",
+    "drivers/hwmon/aht10.ko",
+    "lib/crc/crc8.ko",
+    "drivers/iio/pressure/bmp280.ko",
+    "drivers/iio/pressure/bmp280-i2c.ko",
+    "drivers/iio/pressure/bmp280-spi.ko",
+    "drivers/i2c/i2c-dev.ko",
+    "drivers/iio/buffer/kfifo_buf.ko",
+    "drivers/iio/buffer/industrialio-triggered-buffer.ko",
 ]
 
 # ============================================================
@@ -322,6 +342,16 @@ SPACEMIT_IN_TREE_MODULES = [
     "drivers/bluetooth/btrtl.ko",
     "drivers/net/wireless/realtek/rtl8852bs/8852bs.ko",
     "drivers/media/cec/platform/cec-gpio/cec-gpio.ko",
+    # Header I2C4 sensors: AHT20 (hwmon), BMP280 (IIO), i2c-dev (MPU-9250 from the HAL)
+    "drivers/hwmon/hwmon.ko",
+    "drivers/hwmon/aht10.ko",
+    "lib/crc/crc8.ko",
+    "drivers/iio/pressure/bmp280.ko",
+    "drivers/iio/pressure/bmp280-i2c.ko",
+    "drivers/iio/pressure/bmp280-spi.ko",
+    "drivers/i2c/i2c-dev.ko",
+    "drivers/iio/buffer/kfifo_buf.ko",
+    "drivers/iio/buffer/industrialio-triggered-buffer.ko",
 ]
 
 # ============================================================

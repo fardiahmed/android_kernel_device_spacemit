@@ -301,3 +301,9 @@ CONFIG_SND_SOC_K1_HDMI_AUDIO=m
 # HDMI-CEC: cec-gpio adapter on GPIO_88, physical address from spacemit_hdmi
 # ============================================================
 CONFIG_CEC_GPIO=m
+
+# Header I2C4 sensors: AHT20 and BMP280 drivers, the MPU-9250 IMU through i2c-dev
+CONFIG_HWMON=m
+CONFIG_SENSORS_AHT10=m
+CONFIG_BMP280=m
+CONFIG_I2C_CHARDEV=m
