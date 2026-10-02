@@ -234,7 +234,7 @@ kernel_build(
         "modules.builtin.modinfo",
         "vmlinux",
         "vmlinux.symvers",
-        # K3 reference board until the SM10 carrier DTS exists.
+        "arch/riscv/boot/dts/spacemit/k3-bananapi-sm10.dtb",
         "arch/riscv/boot/dts/spacemit/k3-pico-itx.dtb",
     ],
     arch = "riscv64",
@@ -244,6 +244,7 @@ kernel_build(
         "Image",
         "Image.gz",
         "modules",
+        "spacemit/k3-bananapi-sm10.dtb",
         "spacemit/k3-pico-itx.dtb",
     ],
     makefile = "//common:Makefile",
