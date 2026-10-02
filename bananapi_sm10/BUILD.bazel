@@ -110,12 +110,26 @@ SPACEMIT_K3_VENDOR_DLKM_MODULES = [
     "snd-soc-es8326.ko",
     # i2c-dev (userspace I2C, e.g. header sensors)
     "i2c-dev.ko",
+    # RTL8852BE (BPI-SM10 M.2 E-key): Wi-Fi on PCIe, Bluetooth on USB, rfkill-gpio enables
+    "rtw89_core.ko",
+    "rtw89_pci.ko",
+    "rtw89_8852b_common.ko",
+    "rtw89_8852b.ko",
+    "rtw89_8852be.ko",
+    "btintel.ko",
+    "btrtl.ko",
+    "btusb.ko",
+    "rfkill-gpio.ko",
+    # Board EEPROM
+    "at24.ko",
 ]
 
 # Every non-GKI module the shared K1/K3 config builds (Kleaf requires them declared). The K1
 # drivers are built too, since the K1 fragment is part of this config; only the lists above ship.
 SPACEMIT_K3_BUILT_MODULES = [
+    "drivers/bluetooth/btintel.ko",
     "drivers/bluetooth/btrtl.ko",
+    "drivers/bluetooth/btusb.ko",
     "drivers/char/hw_random/optee-rng.ko",
     "drivers/clk/spacemit/spacemit-ccu-k1.ko",
     "drivers/clk/spacemit/spacemit-ccu-k3.ko",
@@ -163,6 +177,7 @@ SPACEMIT_K3_BUILT_MODULES = [
     "drivers/media/platform/spacemit/vpu_k1x/amvx.ko",
     "drivers/media/platform/spacemit/vpu_k3/amvx_k3.ko",
     "drivers/mfd/simple-mfd-i2c.ko",
+    "drivers/misc/eeprom/at24.ko",
     "drivers/mmc/host/sdhci-of-k1.ko",
     "drivers/net/ethernet/spacemit/k1_emac.ko",
     "drivers/net/ethernet/stmicro/stmmac/dwmac-generic.ko",
@@ -177,6 +192,11 @@ SPACEMIT_K3_BUILT_MODULES = [
     "drivers/net/phy/phy_package.ko",
     "drivers/net/phy/realtek/realtek.ko",
     "drivers/net/wireless/realtek/rtl8852bs/8852bs.ko",
+    "drivers/net/wireless/realtek/rtw89/rtw89_8852b.ko",
+    "drivers/net/wireless/realtek/rtw89/rtw89_8852b_common.ko",
+    "drivers/net/wireless/realtek/rtw89/rtw89_8852be.ko",
+    "drivers/net/wireless/realtek/rtw89/rtw89_core.ko",
+    "drivers/net/wireless/realtek/rtw89/rtw89_pci.ko",
     "drivers/nvmem/spacemit-efuse.ko",
     "drivers/pci/controller/dwc/pcie-spacemit-k1.ko",
     "drivers/pci/pwrctrl/pci-pwrctrl-core.ko",
@@ -214,6 +234,7 @@ SPACEMIT_K3_BUILT_MODULES = [
     "drivers/usb/phy/phy-k1x-ci-usb2.ko",
     "drivers/usb/typec/fusb301.ko",
     "lib/crc/crc8.ko",
+    "net/rfkill/rfkill-gpio.ko",
     "sound/soc/codecs/snd-soc-es8326.ko",
     "sound/soc/codecs/snd-soc-simple-amplifier.ko",
     "sound/soc/generic/snd-soc-simple-card-utils.ko",

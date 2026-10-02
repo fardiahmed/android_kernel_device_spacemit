@@ -38,7 +38,7 @@ CONFIG_SPACEMIT_POWERKEY_MONITOR=y
 CONFIG_SPACEMIT_REBOOT_CONTROL=y
 
 # ------------------------------------------------------------------
-# USB3 / PCIe PHYs, Type-C (pico-itx reference: FUSB301)
+# USB3 / PCIe PHYs, Type-C (FUSB301 on the CoM260 carrier and the Pico-ITX)
 # ------------------------------------------------------------------
 CONFIG_PHY_SPACEMIT_K3_USB3=m
 CONFIG_PHY_SPACEMIT_K3_PCIE=m
@@ -55,3 +55,17 @@ CONFIG_DWMAC_SPACEMIT=m
 # Audio: K3 RI2S (DP audio card on the reference board)
 # ------------------------------------------------------------------
 CONFIG_SND_SOC_K3_RI2S=m
+
+# ------------------------------------------------------------------
+# Wi-Fi/BT: RTL8852BE M.2 E-key (PCIe Wi-Fi, USB Bluetooth), rfkill-gpio enables
+# ------------------------------------------------------------------
+CONFIG_RTW89=m
+CONFIG_RTW89_8852BE=m
+CONFIG_BT_HCIBTUSB=m
+CONFIG_BT_HCIBTUSB_RTL=y
+CONFIG_RFKILL_GPIO=m
+
+# ------------------------------------------------------------------
+# Board EEPROM (BPI-SM10 carrier, i2c2)
+# ------------------------------------------------------------------
+CONFIG_EEPROM_AT24=m
