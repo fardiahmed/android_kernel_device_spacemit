@@ -143,6 +143,10 @@ SPACEMIT_VENDOR_DLKM_MODULES = [
     "8852bs.ko",
     # HDMI-CEC over GPIO_88 (cec-gpio)
     "cec-gpio.ko",
+    # OP-TEE over SBI MPXY/RPMI (tee before optee: optee depends on it)
+    "tee.ko",
+    "optee.ko",
+    "optee-rng.ko",
     # Header I2C4 sensors: AHT20 (hwmon), BMP280 (IIO), i2c-dev (MPU-9250 from the HAL)
     "hwmon.ko",
     "aht10.ko",
@@ -229,6 +233,9 @@ SPACEMIT_VENDOR_DLKM_MODULES_PATHS = [
     "sound/soc/spacemit/snd-soc-k1-hdmi-audio.ko",
     "drivers/net/wireless/realtek/rtl8852bs/8852bs.ko",
     "drivers/media/cec/platform/cec-gpio/cec-gpio.ko",
+    "drivers/tee/tee.ko",
+    "drivers/tee/optee/optee.ko",
+    "drivers/char/hw_random/optee-rng.ko",
     # Header I2C4 sensors: AHT20 (hwmon), BMP280 (IIO), i2c-dev (MPU-9250 from the HAL)
     "drivers/hwmon/hwmon.ko",
     "drivers/hwmon/aht10.ko",
@@ -347,6 +354,9 @@ SPACEMIT_IN_TREE_MODULES = [
     "drivers/bluetooth/btrtl.ko",
     "drivers/net/wireless/realtek/rtl8852bs/8852bs.ko",
     "drivers/media/cec/platform/cec-gpio/cec-gpio.ko",
+    "drivers/tee/tee.ko",
+    "drivers/tee/optee/optee.ko",
+    "drivers/char/hw_random/optee-rng.ko",
     # Header I2C4 sensors: AHT20 (hwmon), BMP280 (IIO), i2c-dev (MPU-9250 from the HAL)
     "drivers/hwmon/hwmon.ko",
     "drivers/hwmon/aht10.ko",

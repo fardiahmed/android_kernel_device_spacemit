@@ -116,6 +116,7 @@ SPACEMIT_K3_VENDOR_DLKM_MODULES = [
 # drivers are built too, since the K1 fragment is part of this config; only the lists above ship.
 SPACEMIT_K3_BUILT_MODULES = [
     "drivers/bluetooth/btrtl.ko",
+    "drivers/char/hw_random/optee-rng.ko",
     "drivers/clk/spacemit/spacemit-ccu-k1.ko",
     "drivers/clk/spacemit/spacemit-ccu-k3.ko",
     "drivers/clk/spacemit/spacemit-ccu.ko",
@@ -200,6 +201,8 @@ SPACEMIT_K3_BUILT_MODULES = [
     "drivers/spi/k1x-spi.ko",
     "drivers/spi/spi-k1x-qspi.ko",
     "drivers/spi/spi-spacemit-k1.ko",
+    "drivers/tee/optee/optee.ko",
+    "drivers/tee/tee.ko",
     "drivers/thermal/k1x-thermal.ko",
     "drivers/thermal/k3-thermal.ko",
     "drivers/ufs/host/ufs-spacemit.ko",
